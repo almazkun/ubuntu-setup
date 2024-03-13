@@ -25,3 +25,5 @@ Set up ubuntu
 3. `HandleLidSwitchExternalPower=ignore`
 4. `HandleLidSwitchDocked=ignore`
 
+## Disable sleep
+1. `sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target`
