@@ -12,12 +12,12 @@ Set up ubuntu
 
 ## Disable password ssh
 1. `echo 'ssh-rsa your-public-key-here' ~/.ssh/authorized_keys`
-1. `sudo nano /etc/ssh/sshd_config`
-2. `PermitRootLogin no`
-3. `PasswordAuthentication no`
-4. `ChallengeResponseAuthentication no`
-5. `UsePAM no`
-6. Save & exit.
+2. `sudo nano /etc/ssh/sshd_config`
+3. `PermitRootLogin no`
+4. `PasswordAuthentication no`
+5. `ChallengeResponseAuthentication no`
+6. `UsePAM no`
+7. Save & exit.
 
 ## Disable Lid
 1. `sudo nano /etc/systemd/logind.conf`
@@ -27,3 +27,9 @@ Set up ubuntu
 
 ## Disable sleep
 1. `sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target`
+
+## Clean
+1. `sudo apt-get clean`
+2. `sudo apt-get autoclean`
+3. `sudo apt-get autoremove`
+4. `sudo find / -type f -size +100M`
